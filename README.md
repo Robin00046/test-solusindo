@@ -1,6 +1,6 @@
 # 🧩 Assessment Application — Laravel + Vue (Inertia.js)
 
-Project ini merupakan aplikasi berbasis **Laravel**, **Vue 3**, dan **Inertia.js** yang dirancang untuk kebutuhan penilaian dan pengelolaan data. Aplikasi berjalan sebagai SPA namun tetap menggunakan routing Laravel tanpa memisahkan backend dan frontend.
+Project ini merupakan aplikasi berbasis **Laravel**, **Vue 3**, dan **Inertia.js** yang dirancang untuk kebutuhan penilaian. Aplikasi berjalan sebagai SPA namun tetap menggunakan routing Laravel tanpa memisahkan backend dan frontend.
 
 ---
 
@@ -29,25 +29,46 @@ Saya memilih arsitektur **digabung** dengan alasan:
 
 ## 📦 Instalasi & Menjalankan Project
 
-### 1️⃣ Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/Robin00046/test-solusindo.git
 cd test-solusindo
+
+```
+### 2. Install Composer
+```bash
 composer install
 
+```
+
+### 3. Copy & Generate Environment
+```bash
 cp .env.example .env
 php artisan key:generate
 
-php artisan migrate
+```
 
+### 4. Jalankan Migration
+```bash
+php artisan migrate
 php artisan db:seed
 
+```
+### 5. Install Dependency Frontend (Inertia + Vite)
+```bash
 npm install
 
-npm run dev
-
-php artisan serve
-
-
 ```
+
+### 6. Jalankan Vite
+
+```bash
+npm run dev
+```
+### 7. Jalankan Laravel dan setting envnya sesuaikan ke 127.0.0.1 portnya berapa
+
+```bash
+php artisan serve
+```
+
