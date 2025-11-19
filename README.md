@@ -19,11 +19,11 @@ Saya memilih arsitektur **digabung** dengan alasan:
 
 ## 🛠️ Tech Stack
 
--   **Laravel 11**
+-   **Laravel 12**
 -   **Vue 3 + Vite**
 -   **Inertia.js**
 -   **TailwindCSS**
--   **MySQL**
+-   **PostgreSQL**
 
 ---
 
@@ -32,6 +32,8 @@ Saya memilih arsitektur **digabung** dengan alasan:
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/username/nama-project.git
-cd nama-project
+git clone https://github.com/Robin00046/test-solusindo.git
+cd test-solusindo
+
+
 ```
