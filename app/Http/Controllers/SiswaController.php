@@ -44,6 +44,11 @@ class SiswaController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:100',
             'kelas' => 'required|string|max:10',
+        ],[
+            'nama.required' => 'Nama wajib diisi.',
+            'nama.max' => 'Nama maksimal 100 karakter.',
+            'kelas.required' => 'Kelas wajib diisi.',
+            'kelas.max' => 'Kelas maksimal 10 karakter.',
         ]);
 
         Siswa::create($validated);
@@ -79,6 +84,11 @@ class SiswaController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:100',
             'kelas' => 'required|string|max:10',
+        ],[
+            'nama.required' => 'Nama wajib diisi.',
+            'nama.max' => 'Nama maksimal 100 karakter.',
+            'kelas.required' => 'Kelas wajib diisi.',
+            'kelas.max' => 'Kelas maksimal 10 karakter.',
         ]);
 
         $siswa->update($validated);

@@ -5,6 +5,7 @@ import { useForm } from "@inertiajs/vue3";
 
 const props = defineProps({
     siswa: Object,
+    errors: Object,
 });
 
 const form = useForm({
@@ -38,6 +39,9 @@ const submit = () => {
                     placeholder="Masukkan Nama"
                     required
                 />
+                <div v-if="props.errors.nama" class="text-red-600 text-sm mt-1">
+                    {{ props.errors.nama }}
+                </div>
             </div>
 
             <div>
@@ -54,6 +58,12 @@ const submit = () => {
                     placeholder="Masukkan Kelas"
                     required
                 />
+                <div
+                    v-if="props.errors.kelas"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.kelas }}
+                </div>
             </div>
 
             <button

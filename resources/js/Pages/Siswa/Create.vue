@@ -6,6 +6,10 @@ const form = useForm({
     nama: "",
     kelas: "",
 });
+
+const props = defineProps({
+    errors: Object,
+});
 </script>
 
 <template>
@@ -29,6 +33,7 @@ const form = useForm({
                     placeholder="Masukkan Nama"
                     required
                 />
+                <div v-if="props.errors.nama" class="text-red-600 text-sm mt-1">{{ props.errors.nama }}</div>
             </div>
 
             <div>
@@ -45,6 +50,7 @@ const form = useForm({
                     placeholder="Masukkan Kelas"
                     required
                 />
+                <div v-if="props.errors.kelas" class="text-red-600 text-sm mt-1">{{ props.errors.kelas }}</div>
             </div>
 
             <button

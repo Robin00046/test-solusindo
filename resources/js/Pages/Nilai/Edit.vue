@@ -6,6 +6,7 @@ import { router } from "@inertiajs/vue3";
 const props = defineProps({
     nilai: Object,
     siswas: Array,
+    errors: Object,
 });
 
 const form = useForm({
@@ -48,6 +49,12 @@ const submit = () => {
                         {{ siswa.nama }}
                     </option>
                 </select>
+                <div
+                    v-if="props.errors.siswa_id"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.siswa_id }}
+                </div>
             </div>
 
             <div>
@@ -64,6 +71,12 @@ const submit = () => {
                     placeholder="Masukkan Mata Pelajaran"
                     required
                 />
+                <div
+                    v-if="props.errors.mapel"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.mapel }}
+                </div>
             </div>
 
             <div>
@@ -80,6 +93,12 @@ const submit = () => {
                     placeholder="Masukkan Nilai"
                     required
                 />
+                <div
+                    v-if="props.errors.nilai"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.nilai }}
+                </div>
             </div>
 
             <button

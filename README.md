@@ -51,8 +51,7 @@ php artisan key:generate
 
 ### 4. Jalankan Migration
 ```bash
-php artisan migrate
-php artisan db:seed
+php artisan migrate --seed
 
 ```
 ### 5. Install Dependency Frontend (Inertia + Vite)
@@ -71,4 +70,12 @@ npm run dev
 ```bash
 php artisan serve
 ```
+
+untuk tabelnya aku sesuaikan sedikit karena ada 2 field kelas aku hanya ambil untuk di tabel siswa karena untuk meminimalisir salah input jika disimpan 2 2nya di tabel yang berbeda.
+
+
+
+untuk Test Logika Aku gabungkan kedalam Project ini dengan file test1.php di root directory
+
+
 

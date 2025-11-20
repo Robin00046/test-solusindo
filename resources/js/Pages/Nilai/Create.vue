@@ -7,6 +7,7 @@ import { useForm } from "@inertiajs/vue3";
 import CardComponent from "@/Components/CardComponent.vue";
 const props = defineProps({
     siswas: Array,
+    errors: Object,
 });
 
 const form = useForm({
@@ -44,6 +45,12 @@ const form = useForm({
                         {{ siswa.nama }}
                     </option>
                 </select>
+                <div
+                    v-if="props.errors.siswa_id"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.siswa_id }}
+                </div>
             </div>
 
             <div>
@@ -60,6 +67,12 @@ const form = useForm({
                     placeholder="Masukkan Mata Pelajaran"
                     required
                 />
+                <div
+                    v-if="props.errors.mapel"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.mapel }}
+                </div>
             </div>
 
             <div>
@@ -76,6 +89,12 @@ const form = useForm({
                     placeholder="Masukkan Nilai"
                     required
                 />
+                <div
+                    v-if="props.errors.nilai"
+                    class="text-red-600 text-sm mt-1"
+                >
+                    {{ props.errors.nilai }}
+                </div>
             </div>
 
             <button

@@ -59,6 +59,15 @@ class NilaiController extends Controller
             'siswa_id' => 'required|exists:siswas,id',
             'mapel' => 'required|string|max:50',
             'nilai' => 'required|integer|min:0|max:100',
+        ],[
+            'siswa_id.required' => 'Siswa wajib diisi.',
+            'siswa_id.exists' => 'Siswa tidak ditemukan.',
+            'mapel.required' => 'Mata pelajaran wajib diisi.',
+            'mapel.max' => 'Mata pelajaran maksimal 50 karakter.',
+            'nilai.required' => 'Nilai wajib diisi.',
+            'nilai.integer' => 'Nilai harus berupa angka.',
+            'nilai.min' => 'Nilai minimal 0.',
+            'nilai.max' => 'Nilai maksimal 100.',
         ]);
 
         // cek dulu apakah nilai untuk siswa dan mapel tersebut sudah ada
@@ -106,6 +115,15 @@ class NilaiController extends Controller
             'siswa_id' => 'required|exists:siswas,id',
             'mapel' => 'required|string|max:50',
             'nilai' => 'required|integer|min:0|max:100',
+        ],[
+            'siswa_id.required' => 'Siswa wajib diisi.',
+            'siswa_id.exists' => 'Siswa tidak ditemukan.',
+            'mapel.required' => 'Mata pelajaran wajib diisi.',
+            'mapel.max' => 'Mata pelajaran maksimal 50 karakter.',
+            'nilai.required' => 'Nilai wajib diisi.',
+            'nilai.integer' => 'Nilai harus berupa angka.',
+            'nilai.min' => 'Nilai minimal 0.',
+            'nilai.max' => 'Nilai maksimal 100.',
         ]);
 
         // Cek duplikat kecuali record yg sedang diedit

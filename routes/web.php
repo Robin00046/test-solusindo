@@ -11,6 +11,21 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
+// test 1
+Route::get('/test-1', function () {
+    $nilai = [
+        ["nama" => "Andi", "mapel" => "Matematika", "nilai" => 80],
+        ["nama" => "Budi", "mapel" => "Matematika", "nilai" => 60],
+        ["nama" => "Citra", "mapel" => "Matematika", "nilai" => 90],
+        ["nama" => "Andi", "mapel" => "Bahasa", "nilai" => 70],
+        ["nama" => "Budi", "mapel" => "Bahasa", "nilai" => 75],
+        ["nama" => "Citra", "mapel" => "Bahasa", "nilai" => 85],
+    ];
+
+    
+
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
