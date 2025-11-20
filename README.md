@@ -71,11 +71,27 @@ npm run dev
 php artisan serve
 ```
 
-untuk tabelnya aku sesuaikan sedikit karena ada 2 field kelas aku hanya ambil untuk di tabel siswa karena untuk meminimalisir salah input jika disimpan 2 2nya di tabel yang berbeda.
+### untuk tabelnya aku sesuaikan sedikit karena ada 2 field kelas aku hanya ambil untuk di tabel siswa karena untuk meminimalisir salah input jika disimpan 2 2nya di tabel yang berbeda.
 
+### env yang aku gunakan postgres sql adalah ini
 
+```bash
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=mydb
+DB_USERNAME=myuser
+DB_PASSWORD=mypass
+```
 
-untuk Test Logika Aku gabungkan kedalam Project ini dengan file test1.php di root directory
+### Untuk Login bisa pakai hasil seeder atau bisa langsung register di menu yan tersedia
+```bash
+email : admin@example.com
+password : password
+```
 
-
+### untuk Test Logika Aku gabungkan kedalam Project ini dengan file test1.php di root directory, langsung di run menggunakan perintah ini
+```bash
+php test1.php
+```
 

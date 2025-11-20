@@ -16,7 +16,12 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-
+        // create 1 user admin
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => bcrypt('password'),
+        ]);
         $this->call(NilaiSeeder::class);
     }
 }
